@@ -1,0 +1,32 @@
+{
+  "name": "@iedc-marian-next/api",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./src/*.ts"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsdown"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@trpc/server": "catalog:",
+    "@trpc/client": "catalog:",
+    "next": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:",
+    "@iedc-marian-next/auth": "workspace:*",
+    "@iedc-marian-next/db": "workspace:*"
+  }
+}
